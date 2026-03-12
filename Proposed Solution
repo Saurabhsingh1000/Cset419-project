@@ -1,0 +1,34 @@
+We propose a RAG-based architecture that decouples knowledge retrieval from language generation:
+User Query
+    │
+    ▼
+┌─────────────────────┐
+│  Query Embedding    │  ← Convert query to vector
+└────────┬────────────┘
+         │
+         ▼
+┌─────────────────────┐
+│   Vector Store      │  ← FAISS / ChromaDB similarity search
+│  (PDF chunks)       │
+└────────┬────────────┘
+         │  Top-K relevant chunks
+         ▼
+┌─────────────────────┐
+│  Prompt Builder     │  ← Combine query + retrieved context
+└────────┬────────────┘
+         │
+         ▼
+┌─────────────────────┐
+│       LLM           │  ← Generate grounded answer
+│  (GPT / Gemini)     │
+└────────┬────────────┘
+         │
+         ▼
+      Answer
+
+Key design decisions:
+
+Chunking strategy: Recursive character splitting (chunk size = 500, overlap = 50) to preserve sentence context across boundaries
+Embedding model: text-embedding-ada-002 (OpenAI) or all-MiniLM-L6-v2 (HuggingFace) for semantic similarity
+Retriever: Top-3 chunks via cosine similarity
+LLM prompt: System-level instruction to answer only from provided context, falling back to "I don't know" if no relevant chunk is found
