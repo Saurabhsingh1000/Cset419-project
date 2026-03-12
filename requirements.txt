@@ -1,1 +1,21 @@
-
+# RAG PDF Chatbot — Python Dependencies
+# Install with: pip install -r requirements.txt
+ 
+# PDF parsing
+PyPDF2==3.0.1
+ 
+# Text embeddings (runs locally, no API needed)
+sentence-transformers==2.7.0
+ 
+# Vector similarity search
+faiss-cpu==1.8.0
+ 
+# Google Gemini LLM
+google-generativeai==0.7.2
+ 
+# Web UI
+streamlit==1.35.0
+ 
+# Utilities
+numpy==1.26.4
+ 
