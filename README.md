@@ -170,12 +170,11 @@ The following research papers directly informed the design and methodology of th
 
 | Member | Roll No. | Contributions |
 |---|---|---|
-| **[Your Name]** | [Roll No.] | Project architecture design, LangChain pipeline, vector store integration, README |
-| **[Member 2]** | [Roll No.] | PDF parsing module, text preprocessing, chunking strategy |
-| **[Member 3]** | [Roll No.] | Streamlit frontend UI, user testing, deployment |
-| **[Member 4]** | [Roll No.] | Experiment design, RAGAS evaluation, results analysis, presentation |
+| **[Saurabh Kumar Singh]** | [E23CSEU2018] | Project architecture design, LangChain pipeline, vector store integration, README |
+| **[Abhishek Khaiwal]** | [E23CSEU2041] | PDF parsing module, text preprocessing, chunking strategy |
+| **[Khoushik Vadde]** | [E23CSEU2020] | Streamlit frontend UI, user testing, deployment |
+| **[Ayush Kumar Jha]** | [E23CSEU2047] | Experiment design, RAGAS evaluation, results analysis, presentation |
 
-> *Note: Update this table with your actual team member names and roll numbers.*
 
 ---
 
