@@ -1,8 +1,0 @@
- References:
-
-Lewis, P., et al. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS 2020. https://arxiv.org/abs/2005.11401
-Karpukhin, V., et al. (2020). Dense Passage Retrieval for Open-Domain Question Answering. EMNLP 2020. https://arxiv.org/abs/2004.04906
-Guu, K., et al. (2020). REALM: Retrieval-Augmented Language Model Pre-Training. ICML 2020. https://arxiv.org/abs/2002.08909
-Borgeaud, S., et al. (2022). Improving language models by retrieving from trillions of tokens. ICML 2022. https://arxiv.org/abs/2112.04426
-Johnson, J., Douze, M., & Jégou, H. (2019). Billion-scale similarity search with GPUs. IEEE Transactions on Big Data. https://arxiv.org/abs/1702.08734
-Es, S., et al. (2023). RAGAS: Automated Evaluation of Retrieval Augmented Generation. https://arxiv.org/abs/2309.15217
