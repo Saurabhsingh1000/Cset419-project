@@ -1,10 +1,7 @@
-This project implements a Retrieval-Augmented Generation (RAG) pipeline to build a PDF-aware chatbot. The system allows users to upload one or more PDF documents and interact with them via natural language queries. Instead of relying solely on an LLM's parametric memory, the chatbot dynamically retrieves the most relevant chunks from the uploaded PDFs and conditions the LLM's response on that context — greatly reducing hallucination and improving factual accuracy.
-The system leverages:
+Large Language Models (LLMs) have demonstrated impressive performance on a wide range of NLP tasks. However, they suffer from two critical limitations in document-centric use cases:
 
-PDF Parsing to extract and clean raw text from documents
-Semantic Chunking to split text into meaningful, retrievable units
-Vector Embeddings to encode chunks into a high-dimensional semantic space
-FAISS / ChromaDB as a vector store for efficient similarity search
-LLM (e.g., GPT-3.5 / Gemini / LLaMA) for final answer generation
-LangChain as the orchestration framework connecting all components
-Streamlit for a clean, user-friendly web interface
+1. Knowledge cutoff: LLMs are trained on static datasets and have no awareness of domain-specific or newly created documents.
+2. Hallucination: LLMs tend to generate plausible-sounding but factually incorrect answers when queried outside their training distribution.
+
+Traditional keyword-based search (e.g., Ctrl+F, grep) cannot handle semantic queries like "What are the termination conditions mentioned in this contract?" or "Summarize the methodology section."
+The need: An intelligent system that can ingest arbitrary PDF documents and answer natural language questions grounded in the document's actual content — accurately, quickly, and without hallucination.
