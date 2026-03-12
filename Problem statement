@@ -1,7 +1,0 @@
-Large Language Models (LLMs) have demonstrated impressive performance on a wide range of NLP tasks. However, they suffer from two critical limitations in document-centric use cases:
-
-1. Knowledge cutoff: LLMs are trained on static datasets and have no awareness of domain-specific or newly created documents.
-2. Hallucination: LLMs tend to generate plausible-sounding but factually incorrect answers when queried outside their training distribution.
-
-Traditional keyword-based search (e.g., Ctrl+F, grep) cannot handle semantic queries like "What are the termination conditions mentioned in this contract?" or "Summarize the methodology section."
-The need: An intelligent system that can ingest arbitrary PDF documents and answer natural language questions grounded in the document's actual content — accurately, quickly, and without hallucination.
