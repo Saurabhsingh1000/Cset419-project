@@ -1,9 +1,10 @@
-Problem Statement – RAG Based PDF Chatbot
+This project implements a Retrieval-Augmented Generation (RAG) pipeline to build a PDF-aware chatbot. The system allows users to upload one or more PDF documents and interact with them via natural language queries. Instead of relying solely on an LLM's parametric memory, the chatbot dynamically retrieves the most relevant chunks from the uploaded PDFs and conditions the LLM's response on that context — greatly reducing hallucination and improving factual accuracy.
+The system leverages:
 
-In today’s digital era, a huge amount of information is stored in the form of PDF documents such as research papers, manuals, reports, legal documents, academic notes, and organizational records. Although these documents contain valuable knowledge, extracting specific information from them is often time-consuming and inefficient. Users usually need to manually read long documents, search through multiple pages, and interpret complex information to find answers to their queries. Traditional keyword-based search methods are limited because they fail to understand context, semantics, or user intent, resulting in irrelevant or incomplete results. This creates a major challenge for students, researchers, professionals, and organizations who require quick and accurate access to document content.
-
-To address this issue, there is a need for an intelligent system that can understand natural language questions and provide precise, context-aware answers directly from PDF documents. A Retrieval-Augmented Generation (RAG) based PDF Chatbot aims to solve this problem by combining document retrieval techniques with advanced Large Language Models (LLMs). Instead of relying solely on pre-trained knowledge, the system retrieves relevant sections from the uploaded PDF documents and uses them as contextual input to generate accurate and reliable responses. This approach reduces hallucinations, improves factual accuracy, and enables real-time question answering based on user-provided data.
-
-The core challenge lies in processing unstructured PDF data, extracting meaningful text, splitting it into manageable chunks, generating embeddings, and storing them in a vector database for efficient similarity search. Additionally, the system must handle different PDF formats, maintain contextual continuity, and ensure that responses are generated in a human-like conversational manner. Another challenge is ensuring scalability, response speed, and data privacy, especially when dealing with large or sensitive documents. The chatbot should be capable of understanding complex queries, summarizing information, and providing explanations without requiring users to read the entire document.
-
-Therefore, the problem statement focuses on designing and developing a smart RAG-based PDF Chatbot that can bridge the gap between static documents and interactive knowledge retrieval. The system should enable users to upload PDFs, ask natural language questions, and receive accurate, context-aware answers instantly. By integrating information retrieval with generative AI, the solution aims to enhance productivity, reduce information overload, and improve the overall accessibility and usability of document-based knowledge systems.
+PDF Parsing to extract and clean raw text from documents
+Semantic Chunking to split text into meaningful, retrievable units
+Vector Embeddings to encode chunks into a high-dimensional semantic space
+FAISS / ChromaDB as a vector store for efficient similarity search
+LLM (e.g., GPT-3.5 / Gemini / LLaMA) for final answer generation
+LangChain as the orchestration framework connecting all components
+Streamlit for a clean, user-friendly web interface
